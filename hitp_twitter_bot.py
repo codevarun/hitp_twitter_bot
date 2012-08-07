@@ -51,6 +51,5 @@ if __name__ == '__main__':
         if update['user']['screen_name'].lower() != BOT_SCREEN_NAME.lower():
             try:
                 poster.statuses.retweet(id=update['id'])
-                last_id_retweeted = update['id_str']
             except TwitterHTTPError, e:
                 pass
